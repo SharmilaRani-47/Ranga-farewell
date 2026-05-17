@@ -69,7 +69,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    position: relative;
     color: white;
     padding: 8rem 2rem;
     text-align: center;
@@ -77,19 +77,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Dark Overlay for Hero Section */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: slideDown 0.8s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
     animation: slideUp 0.8s ease-out 0.2s both;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
